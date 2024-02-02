@@ -1,0 +1,7 @@
+{
+  "name": "Space_Flix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
