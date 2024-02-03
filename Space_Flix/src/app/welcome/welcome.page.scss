@@ -1,0 +1,39 @@
+.Content-Background {
+    --background:  #762A76;
+    
+}
+
+ ion-button {
+    --background: #FF4B3A;
+    --background-hover: #eb7166;
+    --border-radius: 20px;
+    --border-color: #FF4B3A;
+    --border-style: solid;
+      font-size: 15px;
+      width: 70%;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+ } 
+
+  .centered-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+.centered-text{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+}
+
+.register-text {
+  cursor: pointer;
+  color: #7eb7f3; /* Color azul típicamente usado para enlaces */
+  text-decoration: underline ;
+  
+}
