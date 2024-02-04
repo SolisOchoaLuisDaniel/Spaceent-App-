@@ -13,7 +13,7 @@ export class WelcomePage implements OnInit {
     public navCtrl: NavController,
 
   ) {}
-
+ 
   ngOnInit() {
   }
 
@@ -24,7 +24,7 @@ export class WelcomePage implements OnInit {
   
   irRegistro() {
     // Redirige a la página Home
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateForward('/regsitro');
   }
 
 }

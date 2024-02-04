@@ -5,30 +5,34 @@
 
  ion-button {
     --background: #FF4B3A;
-    --background-hover: #eb7166;
-    --border-radius: 20px;
+    --background-hover: #ee928a;
+    --border-radius: 30px;
     --border-color: #FF4B3A;
     --border-style: solid;
       font-size: 15px;
       width: 70%;
+      height: 7%;
     --padding-top: 10px;
     --padding-bottom: 10px;
+    font-weight: bold;
+    
  } 
 
-  .centered-button {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-  }
-
+ .centered-button {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 50%;
+  margin-bottom: 20%;
+  
+}
 .centered-text{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1em;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  top: 50%;
+  
 }
 
 .register-text {
