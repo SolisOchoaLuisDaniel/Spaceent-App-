@@ -8,7 +8,11 @@
   <ion-content>
     <!-- Agrega elementos de menú aquí -->
     <ion-list>
-      <ion-item>Cerrar Menú</ion-item>
+      <ion-item class="señalar-menu" (click)="irHome()">Inicio</ion-item>
+      <!-- Agrega más elementos de menú según tus necesidades -->
+    </ion-list>
+    <ion-list>
+      <ion-item (click)="irRegistro()">Prueba 2</ion-item>
       <!-- Agrega más elementos de menú según tus necesidades -->
     </ion-list>
   </ion-content>
