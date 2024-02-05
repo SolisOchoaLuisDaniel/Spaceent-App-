@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalController, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -8,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {}
+
+  ngOnInit() { }
+
+  irHome() {
+    // Redirige a la página Home
+    this.navCtrl.navigateForward('/Home');
+  }
+
+  irRegistro() {
+    // Redirige a la página Home
+    this.navCtrl.navigateForward('/regsitro');
+  }
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-regsitro',
@@ -10,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class RegsitroPage implements OnInit {
   alertButtons = ['OK'];
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController, public navCtrl: NavController,) { }
 
   ngOnInit() { }
 
@@ -23,6 +24,12 @@ export class RegsitroPage implements OnInit {
 
     await alert.present();
   }
+
+  irLogin() {
+    // Redirige a la página Home
+    this.navCtrl.navigateForward('/login');
+  }
+  
 
 }
 
