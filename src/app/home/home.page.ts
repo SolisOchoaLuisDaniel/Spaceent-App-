@@ -1,27 +1,41 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  
 })
 export class HomePage {
+  valorSegmento = 'pantallas';
+  paginaActual: string = 'Home'; // Puedes establecer la página actual aquí
 
-  constructor(public navCtrl: NavController) {}
 
-  ngOnInit() { }
+  constructor(public navCtrl: NavController,) { 
+
+  }
+  irAyuda() {
+    // Redirige a la página Ayuda
+    this.navCtrl.navigateForward('/ayuda');
+}
+  irMovimientos() {
+    // Redirige a la página Movimientos
+    this.navCtrl.navigateForward('/movimientos');
+}
+  irRegistro() {
+    // Redirige a la página Registro
+    this.navCtrl.navigateForward('/regsitro');
+}
+  irReportes() {
+    // Redirige a la página Reportes
+    this.navCtrl.navigateForward('/reportes');
+}
 
   irHome() {
     // Redirige a la página Home
-    this.navCtrl.navigateForward('/Home');
-  }
+    this.navCtrl.navigateForward('/home');
+}
 
-  irRegistro() {
-    // Redirige a la página Home
-    this.navCtrl.navigateForward('/regsitro');
-  }
-
-
+  // Aquí agregarías métodos para manejar interacciones
 }

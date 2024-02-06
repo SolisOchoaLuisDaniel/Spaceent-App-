@@ -1,18 +1,19 @@
 <ion-menu side="start" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menú</ion-title>
+      <ion-title class="Negritas">Menú</ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content>
     <!-- Agrega elementos de menú aquí -->
     <ion-list>
-      <ion-item class="señalar-menu" (click)="irHome()">Inicio</ion-item>
-      <!-- Agrega más elementos de menú según tus necesidades -->
-    </ion-list>
-    <ion-list>
-      <ion-item (click)="irRegistro()">Prueba 2</ion-item>
+
+      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Home' }" (click)="irHome()">Inicio</ion-item>
+      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Reportes' }" (click)="irReportes()">Reportes</ion-item>
+      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Movimientos' }" (click)="irMovimientos()">Movimientos</ion-item>
+      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Ayuda' }" (click)="irAyuda()">Ayuda</ion-item>
+
       <!-- Agrega más elementos de menú según tus necesidades -->
     </ion-list>
   </ion-content>
@@ -23,19 +24,34 @@
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Inicio
+      
+    <ion-title class="Negritas" slot="end">
+      Saldo Acutal: 0
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="Content-Background" [fullscreen]="true" id="main-content">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
+  <div class="pagina-completa">
+  <ion-content id="main-content" class="content-background">
+ 
+    <div class="contenedor-cabecera">
+      <h1 class="Negritas">¿Qué te gustaría ver hoy?</h1>
+    </div>
+       
+  <ion-searchbar class="rounded-searchbar" placeholder="Buscar..."></ion-searchbar>
 
-  <!-- Contenido principal aquí -->
-</ion-content>
+    <ion-segment [(ngModel)]="valorSegmento" >
+
+      <ion-segment-button value="pantallas" class="menu-segment">
+        <ion-label>Pantallas</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="cuentas" class="menu-segment">
+        <ion-label>Cuentas</ion-label>
+      </ion-segment-button>
+      
+    </ion-segment>
+    <!-- Aquí va el contenido basado en la selección del segmento -->
+  </ion-content>
+</div>

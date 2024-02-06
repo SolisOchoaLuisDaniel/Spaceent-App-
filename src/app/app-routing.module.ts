@@ -22,7 +22,19 @@ const routes: Routes = [
   {
     path: 'regsitro',
     loadChildren: () => import('./regsitro/regsitro.module').then( m => m.RegsitroPageModule)
+  },  {
+    path: 'reportes',
+    loadChildren: () => import('./reportes/reportes.module').then( m => m.ReportesPageModule)
   },
+  {
+    path: 'movimientos',
+    loadChildren: () => import('./movimientos/movimientos.module').then( m => m.MovimientosPageModule)
+  },
+  {
+    path: 'ayuda',
+    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
+
 ];
 
 @NgModule({
