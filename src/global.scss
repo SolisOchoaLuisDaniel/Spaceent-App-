@@ -24,3 +24,10 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+/* Establece Nunito como la fuente predeterminada en global.scss */
+/* Establece Nunito como la fuente predeterminada en global.scss */
+html, body {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  
