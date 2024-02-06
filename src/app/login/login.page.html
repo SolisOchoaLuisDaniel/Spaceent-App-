@@ -13,17 +13,17 @@
   
     <ion-card-content> 
       <ion-item>
-        <ion-input label="Usuario:" ></ion-input>
+        <ion-input maxlength="256" [(ngModel)]="usuario" label="Usuario:" ></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input label="Contraseña:" type="password"></ion-input>
+        <ion-input maxlength="8" [(ngModel)]="contrasena" label="Contraseña:" type="password"></ion-input>
       </ion-item>
       <br>
          
     </ion-card-content>
   </ion-card>
-  <ion-button class="centered-button" (click)="presentAlert()">Iniciar sesion</ion-button>
+  <ion-button class="centered-button" (click)="LoginAccess()">Iniciar sesion</ion-button>
   <br>
   <br>
   <ion-text class="centered-text">¿No tienes una cuenta? <ion-text class="register-text" (click)="irRegistro()">Registrate</ion-text> </ion-text> 
