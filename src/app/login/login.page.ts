@@ -53,7 +53,7 @@ export class LoginPage implements OnInit {
               // Navegar a la página de tienda
               this.navCtrl.navigateForward('/home');
             } else {
-              this.sharedDataService.alert('Inicio de sesión','Problemas con el Servidor' ,'Respuesta del servidor incompleta');
+              this.sharedDataService.alert('Inicio de sesión','Datos Erroneos' ,'Revisa sus datos de acceso');
             }
           } else {
             this.sharedDataService.alert('Error del Servidor',"Error" ,'Respuesta vacía del servidor');

@@ -13,24 +13,28 @@
   
     <ion-card-content> 
       <ion-item>
-        <ion-input label="Usuario:" ></ion-input>
+        <ion-input  [(ngModel)]="usuario" maxlength="256" label="Usuario:" ></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input label="Correo:" type="mail"></ion-input>
+        <ion-input  [(ngModel)]="correo" maxlength="256" label="Correo:" type="mail"></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input label="Contraseña:" type="password"></ion-input>
+        <ion-input  [(ngModel)]="contrasena" maxlength="8" label="Contraseña:" type="password"></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input label="Número:" placeholder="Incluir código país" type="tel" maxlength="13"></ion-input>
+        <ion-input  [(ngModel)]="nombre_cliente" maxlength="256" label="Nombre:" type="text"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input  [(ngModel)]="telefono" maxlength="13" label="Número:" placeholder="Incluir código país" type="tel" ></ion-input>
       </ion-item>
          
     </ion-card-content>
   </ion-card>
-  <ion-button class="centered-button" (click)="presentAlert()">Registrarse</ion-button>
+  <ion-button class="centered-button" (click)="RegisterAccess()">Registrarse</ion-button>
 
   <br>
   <ion-text class="centered-text">¿Ya tienes una cuenta? <ion-text (click)="irLogin()" class="register-text">Inicia sesion</ion-text> </ion-text> 
