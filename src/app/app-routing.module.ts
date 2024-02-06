@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'welcome',
+    loadChildren: () => import('./welcome/welcome.module').then(m=>m.WelcomePageModule),
     pathMatch: 'full'
   },
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
   {
     path: 'regsitro',
     loadChildren: () => import('./regsitro/regsitro.module').then( m => m.RegsitroPageModule)
-  },  {
+  },
+  {
     path: 'reportes',
     loadChildren: () => import('./reportes/reportes.module').then( m => m.ReportesPageModule)
   },

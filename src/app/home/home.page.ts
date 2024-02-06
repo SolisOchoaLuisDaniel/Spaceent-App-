@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +13,11 @@ export class HomePage {
   valorSegmento = 'pantallas';
   paginaActual: string = 'Home'; // Puedes establecer la página actual aquí
 
-
-  constructor(public navCtrl: NavController,) { 
-
+  constructor(
+    public navCtrl: NavController,
+    public sharedDataService: SharedDataService,
+    private http: HttpClient
+    ) { 
   }
   irAyuda() {
     // Redirige a la página Ayuda
