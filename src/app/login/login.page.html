@@ -1,10 +1,34 @@
-<ion-content [fullscreen]="true">
- <div id="header">
-  <div id="app-bar">
-    <ion-icon name = "arrow-back" routerLink="/home"></ion-icon>
-    <div id="logo">
-      <img src="assets/Space_flix_logo.jpeg"  alt=""/>
-   </div>
-  </div>
- </div>
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content  class="Content-Background" [fullscreen]="true">
+  <ion-img src="assets/space_flix_logo.svg" alt="Logo Spaceent"></ion-img>
+  <ion-header collapse="condense"></ion-header>
+  <ion-card class="card-login">
+    <ion-img class="card-img" src="assets/login_singup.svg" alt="Logo Spaceent"></ion-img>
+    <ion-card-header>
+      <ion-card-title>Inicar sesion SpaceFlix</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content> 
+      <ion-item>
+        <ion-input maxlength="256" [(ngModel)]="usuario" label="Usuario:" ></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input maxlength="8" [(ngModel)]="contrasena" label="Contraseña:" type="password"></ion-input>
+      </ion-item>
+      <br>
+         
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="centered-button" (click)="LoginAccess()">Iniciar sesion</ion-button>
+  <br>
+  <br>
+  <ion-text class="centered-text">¿No tienes una cuenta? <ion-text class="register-text" (click)="irRegistro()">Registrate</ion-text> </ion-text> 
+  <br> 
+
 </ion-content>
+
+

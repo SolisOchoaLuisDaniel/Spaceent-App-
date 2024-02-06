@@ -27,5 +27,10 @@ export class WelcomePage implements OnInit {
     this.navCtrl.navigateForward('/regsitro');
   }
 
+  irLogin() {
+    // Redirige a la página Home
+    this.navCtrl.navigateForward('/login');
+  }
+
 }
 
