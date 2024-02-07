@@ -1,32 +1,11 @@
-<ion-menu side="start" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title class="Negritas">Menú</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <!-- Agrega elementos de menú aquí -->
-    <ion-list>
-
-      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Home' }" (click)="irHome()">Inicio</ion-item>
-      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Reportes' }" (click)="irReportes()">Reportes</ion-item>
-      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Movimientos' }" (click)="irMovimientos()">Movimientos</ion-item>
-      <ion-item [ngClass]="{ 'señalar-menu': paginaActual === 'Ayuda' }" (click)="irAyuda()">Ayuda</ion-item>
-
-      <!-- Agrega más elementos de menú según tus necesidades -->
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar >
+    <ion-title class="Negritas">Inicio</ion-title>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
-    </ion-buttons>
-      
+      <ion-menu-button menu="main-menu" ></ion-menu-button>
+    </ion-buttons>  
     <ion-title class="Negritas" slot="end">
-      Saldo Acutal: 0
+      Saldo Actual: 0
     </ion-title>
   </ion-toolbar>
 </ion-header>

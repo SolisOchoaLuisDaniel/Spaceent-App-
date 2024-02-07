@@ -1,0 +1,51 @@
+.Content-Background {
+    --background: linear-gradient(to bottom, #9354A3, #BF6196);
+    
+  }
+
+  /* Estilos para el contenido de la cabecera */
+.contenedor-cabecera {
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  /* Estilos para el segmento */
+  .menu-segment {
+    --background: transparent;
+    --indicator-color: white;
+    --color-checked: white;
+    --color: white;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    --border-radius: 10px;
+    margin: 16px;
+    position: relative; /* Asegura que el pseudo-elemento esté posicionado correctamente */
+    font-size: 1.1em;
+    
+  }
+  
+  /* Estilo adicional para ajustar el ancho del indicador */
+  
+  
+  #rounded-box {
+    background-color: #8f22d7;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff; /* Sin espacios adicionales */
+  }
+  /* Estilo para el texto del menú en el tono #BF6196 */
+  
+  .Negritas{
+    font-weight: bold;
+    font-size: 1.4em;
+    
+  }
+  
+  .señalar-menu{
+    color: #BF6196;
+    font-weight: bold;
+  }
+  

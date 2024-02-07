@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { SharedDataService } from '../shared-data.service';
+import { MenuController } from '@ionic/angular';
+import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -15,10 +17,21 @@ export class LoginPage implements OnInit {
   constructor(
     public navCtrl: NavController,
     private sharedDataService: SharedDataService,
-    private http: HttpClient
+    private http: HttpClient,
+    private menu: MenuController
   ) { }
 
   ngOnInit() { }
+
+  ionViewWillEnter() {
+    // Deshabilitar el menú en la página de login
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave() {
+    // Habilitar el menú al salir de la página de login
+    this.menu.enable(true);
+  }
 
   async LoginAccess(){
     if (this.usuario && this.contrasena) {

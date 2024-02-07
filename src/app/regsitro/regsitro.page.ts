@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { SharedDataService } from '../shared-data.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-regsitro',
@@ -20,10 +21,22 @@ export class RegsitroPage implements OnInit {
   constructor(
     public navCtrl: NavController,
     private sharedDataService: SharedDataService,
-    private http: HttpClient
+    private http: HttpClient,
+    private menu: MenuController
   ) { }
 
   ngOnInit() { }
+
+  ionViewWillEnter() {
+    // Deshabilitar el menú en la página de login
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave() {
+    // Habilitar el menú al salir de la página de login
+    this.menu.enable(true);
+  }
+
 
   async RegisterAccess(){
     if (this.usuario && this.contrasena && this.correo && this.nombre_cliente && this.telefono) {

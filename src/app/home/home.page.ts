@@ -15,6 +15,9 @@ export class HomePage {
   constructor(public navCtrl: NavController,) { 
 
   }
+  ngOnInit() {
+  }
+
   irAyuda() {
     // Redirige a la página Ayuda
     this.navCtrl.navigateForward('/ayuda');
