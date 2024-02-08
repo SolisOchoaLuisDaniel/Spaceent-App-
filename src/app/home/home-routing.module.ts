@@ -6,7 +6,7 @@ import { CardServicesComponent } from 'src/componets/card-services/card-services
 const routes: Routes = [
   {
     path: '',
-    component: CardServicesComponent,
+    component: HomePage,
   }
 ];
 
